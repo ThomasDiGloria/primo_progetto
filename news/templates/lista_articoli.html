@@ -5,8 +5,10 @@
 {% endblock title %}
 
 {% block content %}
+    {% for articolo in articoli %}
     <h1> Titolo: {{ articolo.titolo }} </h1>
     <h3> Articolo: {{ articolo.contenuto }} </h3>
     <h5> Autore: {{ articolo.giornalista }} </h5>
     <hr>
+    {% endfor %}
 {% endblock content %}
