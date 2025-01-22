@@ -4,6 +4,7 @@
     {{ articolo.titolo }}
 {% endblock title %}
 
+<!--
 {% block content %}
     {% for articolo in articoli %}
     <h1> Titolo: {{ articolo.titolo }} </h1>
@@ -12,3 +13,19 @@
     <hr>
     {% endfor %}
 {% endblock content %}
+-->
+
+{% for articolo in articoli %}
+    <p><strong>Titolo: </strong>
+        {% comment %} metodo non ottimale per creare il link {% endcomment %}
+        <a href="/news/articoli/{{articolo.id}}">{{articolo.titolo}}</a>
+    </p>
+    <p><strong>Contenuto: </strong>
+        {{articolo.contenuto}}
+    </p>
+    <p><strong>Autore: </strong>
+        {% comment %} metodo corretto per creare il link {% endcomment %}
+        <a href={% url 'news:giornalista_detail' articolo.giornalista.id %}>{{articolo.giornalista}}</a>
+    </p>
+    <hr>
+{% endfor %}

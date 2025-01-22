@@ -16,6 +16,7 @@ class Articolo(models.Model):
     titolo = models.CharField(max_length=100) #alcuni capi necessitano di parametri obbligatori
     contenuto = models.TextField()
     giornalista = models.ForeignKey(Giornalista, on_delete=models.CASCADE, related_name="articoli")
+    visualizzazioni = models.IntegerField(default=0) 
 
     def __str__(self):
         return self.titolo
