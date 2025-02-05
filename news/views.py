@@ -53,7 +53,9 @@ def listaArticoli(request, pk=None):
 
 def giornalistaDetailView(request, pk):
     giornalista = get_object_or_404(Giornalista, pk=pk)
-    context = {"giornalista": giornalista}
+    articoli = giornalista.articoli.all()
+    context = {"giornalista": giornalista,
+               "articoli":articoli}
     return render(request, "giornalista_detail.html", context)
 
 def queryBase(request):
@@ -168,7 +170,8 @@ def queryBase(request):
 
     return render(request,'query.html',context)
 
-    def articoloDetailView(request, pk):
+
+def articoloDetailView(request, pk):
         articolo = get_object_or_404(Articolo, pk=pk)
         context = {"articolo": articolo}
         return render(request, "articolo_detail.html", context)
