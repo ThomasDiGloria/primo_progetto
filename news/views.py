@@ -51,6 +51,11 @@ def listaArticoli(request, pk=None):
     }
     return render(request, 'lista_articoli.html', context)
 
+def giornalistaDetailView(request, pk):
+    giornalista = get_object_or_404(Giornalista, pk=pk)
+    context = {"giornalista": giornalista}
+    return render(request, "giornalista_detail.html", context)
+
 def queryBase(request):
     #1. Tutti gli articoli scritti da giornalisti di un certo cognome
     articoli_cognome = Articolo.objects.filter(giornalista__cognome='Rossi')
@@ -162,3 +167,8 @@ def queryBase(request):
     }
 
     return render(request,'query.html',context)
+
+    def articoloDetailView(request, pk):
+        articolo = get_object_or_404(Articolo, pk=pk)
+        context = {"articolo": articolo}
+        return render(request, "articolo_detail.html", context)
