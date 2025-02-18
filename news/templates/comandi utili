@@ -1,0 +1,2 @@
+py manage.py startapp 'nome cartella'
+branch si crea dalla zona di 'pull'
