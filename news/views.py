@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from .models import Articolo, Giornalista
 
-def home(request):
+def homeNews(request):
 
     """
     a = ""
@@ -34,7 +34,7 @@ def home(request):
     giornalisti = Giornalista.objects.all()
     context = {"articoli": articoli, "giornalisti": giornalisti}
     print(context)
-    return render(request, "homepage.html", context)
+    return render(request, "homepageNews.html", context)
 
 def articoloDetailView(request, pk):
     articolo = get_object_or_404(Articolo, pk=pk)
