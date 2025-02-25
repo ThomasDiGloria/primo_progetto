@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+
+{% block title %}
+    Risposte Query
+{% endblock title %}
+
+{% block content %}
+{% for corso in query_a %}
+<h5>Corso: {{corso}}</h5>
+{% endfor %}
+<hr>
+{% endblock content %}

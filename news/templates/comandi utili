@@ -1,2 +1,8 @@
 py manage.py startapp 'nome cartella'
 branch si crea dalla zona di 'pull'
+
+ricordarsi di aggiungere nel file 'settings.py' di primo progetto l'app e i templates
+
+ricordarsi di modificare urls.py/views.py  e  urls.py di primo_progetto inserendo il nuovo index
+
+py manage.py runserver

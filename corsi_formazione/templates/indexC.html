@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+{% block title%}
+    Index Root
+{%endblock title%}
+{%block content%}
+    <h4>Index:</h4>
+    <p>Benvenuti nella pagina principale del sito</p>
+    <ol>
+        <li><a href="{% url 'corsi_formazione:query_a'%}">Lista dei corsi</a></li>
+    </ol>
+{%endblock content%}
