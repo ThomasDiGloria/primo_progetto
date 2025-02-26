@@ -5,3 +5,10 @@ from .models import Evento
 
 def index(request):
     return render(request, "indexE.html")
+
+def query_a(request):
+    query_a = Evento.objects.order_by('data_inizio');
+    context = {
+        'query_a': query_a,
+    }
+    return render(request,'view_a.html',context)
