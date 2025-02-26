@@ -12,3 +12,9 @@ def query_a(request):
         'query_a': query_a,
     }
     return render(request,'view_a.html',context)
+
+def query_b(request):
+    eventi = Evento.objects.all()
+    context = {"eventi": eventi}
+    print(context)
+    return render(request, "view_b.html", context)

@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{% block title%}
+    Visualizzazione dettagliata eventi
+{%endblock title%}
+{%block content%}
+<h4>Articoli:</h4>
+    {% for evento in eventi %}
+    <p><strong>Titolo: </strong>{{evento.titolo }}</p>
+    
+    <p><strong>Descrizione: </strong>{{evento.descrizione }}</p>
+    <p><strong>Data Inizio: </strong>{{evento.data_inizio }}</p>
+    <p><strong>Data Fine: </strong>{{evento.data_fine }}</p>
+    <p><strong>Posti Disponibili: </strong>{{evento.posti_disponibili }}</p>
+
+    <hr>
+    {%endfor%}
+
+{%endblock content%}
