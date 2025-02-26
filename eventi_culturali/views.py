@@ -45,8 +45,6 @@ def query_f(request):
     totale = 0
     for evento in query_tot:
         totale += evento.posti_disponibili
-
-    
     context = {
         'query_max': query_max,
         'query_min': query_min,

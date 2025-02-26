@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import index, query_a, query_b, query_c, query_d, query_e, query_f
 
-app_name = 'corsi_formazione'
+app_name = 'eventi_culturali'
 
 urlpatterns = [
     path('index', index, name = "index_eventi"),
