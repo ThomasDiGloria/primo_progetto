@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+{% block title%}
+    VIEW D
+{%endblock title%}
+{%block content%}
+<h1>Eventi con più di 80 posti disponibili: </h4>
+
+{% for evento in query_d %}
+<h3>Evento: {{evento}}</h3>
+{% endfor %}
+
+{%endblock content%}

@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+{% block title%}
+    VIEW C
+{%endblock title%}
+{%block content%}
+<h1>Eventi che iniziano dopo il 01/06/2025: </h4>
+
+{% for evento in query_c %}
+<h3>Evento: {{evento}}</h3>
+{% endfor %}
+
+{%endblock content%}

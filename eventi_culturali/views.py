@@ -18,3 +18,17 @@ def query_b(request):
     context = {"eventi": eventi}
     print(context)
     return render(request, "view_b.html", context)
+
+def query_c(request):
+    query_c = Evento.objects.filter(data_inizio__gt=datetime.date(2025,6,1))
+    context = {
+        'query_c': query_c,
+    }
+    return render(request,'view_c.html',context)
+
+def query_d(request):
+    query_d = Evento.objects.filter(posti_disponibili__gte=80)
+    context = {"query_d": query_d}
+    print(context)
+    return render(request, "view_d.html", context)
+    
