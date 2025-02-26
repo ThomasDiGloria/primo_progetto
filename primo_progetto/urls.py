@@ -25,5 +25,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("news.urls", namespace="news")),
     path('admin/', admin.site.urls),
-    path('', include("corsi_formazione.urls", namespace="corsi_formazione")),
+    path('', include("eventi_culturali.urls", namespace="eventi_culturali")),
 ]

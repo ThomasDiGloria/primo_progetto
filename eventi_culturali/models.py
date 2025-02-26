@@ -1,7 +1,7 @@
 from django.db import models
 from datetime import datetime
 
-class Corso(models.Model):
+class Evento(models.Model):
     titolo = models.CharField(max_length=100)
     descrizione = models.TextField
     data_inizio = models.DateField(default=datetime.now(), blank=True)
@@ -12,6 +12,5 @@ class Corso(models.Model):
         return self.titolo
     
     class Meta:
-        verbose_name = "Corso"
-        verbose_name_plural = "Corsi"
-        
+        verbose_name = "Evento"
+        verbose_name_plural = "Eventi"
