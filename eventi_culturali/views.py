@@ -31,4 +31,25 @@ def query_d(request):
     context = {"query_d": query_d}
     print(context)
     return render(request, "view_d.html", context)
+
+def query_e(request):
+    query_e = Evento.objects.filter(data_fine__lt=datetime.date(2025,5,31))
+    context = {"query_e": query_e}
+    print(context)
+    return render(request, "view_e.html", context)
+
+def query_f(request):
+    query_max = Evento.objects.order_by('-posti_disponibili').first()
+    query_min = Evento.objects.order_by('posti_disponibili').first()
+    query_tot = Evento.objects.all()
+    totale = 0
+    for evento in query_tot:
+        totale += evento.posti_disponibili
+
     
+    context = {
+        'query_max': query_max,
+        'query_min': query_min,
+        'totale': totale,
+    }
+    return render(request, "view_f.html", context)

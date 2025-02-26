@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% block title%}
+    VIEW F
+{%endblock title%}
+{%block content%}
+
+<h2>Evento con più posti disponibili: </h2>
+<h3>{{query_max}}</h3>
+<hr>
+
+<h2>Evento con meno posti disponibili: </h2>
+<h3>{{query_min}}</h3>
+<hr>
+
+<h2>Totale posti disponibili per tutti gli eventi: </h2>
+<h3>{{totale}}</h3>
+<hr>
+
+{%endblock content%}

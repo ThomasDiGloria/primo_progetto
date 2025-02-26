@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+{% block title%}
+    VIEW E
+{%endblock title%}
+{%block content%}
+<h1>Eventi che terminano prima del 31/05/2025: </h4>
+
+{% for evento in query_e %}
+<h3>Evento: {{evento}}</h3>
+{% endfor %}
+
+{%endblock content%}
