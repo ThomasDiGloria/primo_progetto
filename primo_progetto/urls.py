@@ -27,3 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("eventi_culturali.urls", namespace="eventi_culturali")),
 ]
+
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
+]
