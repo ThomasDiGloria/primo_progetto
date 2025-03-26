@@ -31,6 +31,9 @@ def contatti(request):
     context = {"form":form}
     return render(request, "contatto.html", context)
 
+def lista_contatti(request):
+    return render(request, "lista_contatti.html")
+
 
 
 
