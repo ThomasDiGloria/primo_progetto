@@ -26,6 +26,8 @@ urlpatterns = [
     path('', include("news.urls", namespace="news")),
     path('admin/', admin.site.urls),
     path('', include("eventi_culturali.urls", namespace="eventi_culturali")),
+    path('admin/', admin.site.urls),
+    path('', include("forms_app.urls", namespace="forms_app")),
 ]
 
 urlpatterns += [
