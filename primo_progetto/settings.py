@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'eventi_culturali',
     'forms_app',
     'crispy_forms',
-    'crispy_bootstrap4'
+    'crispy_bootstrap4',
+    'api'
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
@@ -70,6 +71,7 @@ TEMPLATES = [
                   os.path.join(BASE_DIR, 'news/templates'),
                   os.path.join(BASE_DIR, 'eventi_culturali/templates'),
                   os.path.join(BASE_DIR, 'forms_app/templates'),
+                  os.path.join(BASE_DIR, 'api/templates'),
                   os.path.join(BASE_DIR, 'templates')],
                   
         'APP_DIRS': True,

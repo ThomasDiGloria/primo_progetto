@@ -28,6 +28,8 @@ urlpatterns = [
     path('', include("eventi_culturali.urls", namespace="eventi_culturali")),
     path('admin/', admin.site.urls),
     path('', include("forms_app.urls", namespace="forms_app")),
+    path('admin/', admin.site.urls),
+    path('', include("api.urls", namespace="api")),
 ]
 
 urlpatterns += [

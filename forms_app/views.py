@@ -72,3 +72,4 @@ def elimina_contatto(request, pk):
     return render(request, 'elimina_contatto.html', context)
 
 
+
