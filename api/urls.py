@@ -4,5 +4,5 @@ from .views import todos_view
 app_name = 'api'
 
 urlpatterns = [
-    path('todos/', todos_view, name = 'todos'),
+    path('todos', todos_view, name = 'todos'),
 ]
